@@ -13,21 +13,25 @@ var swipe = angular.module('starter', ['ionic'])
   });
 });
 
-swipe.controller("SwipeController", function($scope, $ionicSlideBoxDelegate) {
+swipe.controller("SwipeController", function($scope) {
 
   $scope.slides = [1,2,3,4];
-   
+  $scope.slider = {};
   $scope.verticalOptions = {
     direction: 'vertical',
     slidesPerView: '1',
     loop: true,
-    paginationClickable: true
+    paginationClickable: true,
+    effect: "coverflow"
   };
+  
   $scope.horizontalOptions = {
 	direction: 'horizontal',
     slidesPerView: '1',
     loop: true,
     paginationClickable: true,
-    showNavButtons: false
+    showNavButtons: false,
+    effect: "coverflow"
   };
+  
 });
